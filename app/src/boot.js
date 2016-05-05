@@ -5,7 +5,7 @@
 'use strict';
 
   angular
-      .module('starterApp', ['ngMaterial', 'dashboard'])
+      .module('starterApp', ['ngMaterial', 'dashboard', 'clients'])
       .config( function($mdThemingProvider, $mdIconProvider) {
 
       $mdIconProvider

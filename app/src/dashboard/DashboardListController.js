@@ -17,7 +17,7 @@
   function DashboardListController($scope, DashboardService, $mdSidenav, $mdBottomSheet, $log, $state ) {
 
     $scope.selected        = null;
-    $scope.users           = [ ];
+    $scope.menus           = [ ];
     $scope.selectUser      = selectUser;
     $scope.toggleUsersList = toggleUsersList;
     $scope.showActions     = showActions;
@@ -48,8 +48,8 @@
      * @param menuId
      */
     function selectUser ( menu ) {
-        $scope.selected = angular.isNumber(menu) ? $scope.users[menu] : menu;
-        $state.go($scope.users[menu].url)
+        $scope.selected = angular.isNumber(menu) ? $scope.menus[menu] : menu;
+        $state.go($scope.selected.state)
         $scope.toggleUsersList();
     }
 

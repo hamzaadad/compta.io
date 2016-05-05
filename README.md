@@ -1,6 +1,8 @@
 # Compta.io Project
 a simple project based on angular / material-design...
 
+#BY HAMZA ADAD
+
 
 ### Install Dependencies
 
