@@ -1,0 +1,29 @@
+<md-content layout="column" flex class="content-wrapper md-padding" id="content" style="width: 100%;">
+  <md-toolbar layout="row" style="background-color: rgb(63, 181, 76);">
+    <md-button class="action" md-no-ink style="margin: 0;width:40px">
+      <md-icon md-svg-icon="menu" ng-click="showActions($event)" style="width:30px;height:30px"></md-icon>
+    </md-button>
+    <h2 style="padding:10px;color: white;"> <md-icon md-svg-icon="{{selected.avatar}}" ng-class="{avatar:selected}" aria-label="{{selected.name}}" style="width:70px;height:70px;color:rgb(63, 181, 76);"></md-icon> {{selected.name}}</h2>
+  </md-toolbar>
+  <md-sidenav class="md-sidenav-left md-whiteframe-z2" md-component-id="left" md-is-locked-open="$media('gt-sm')">
+      <md-list>
+        <md-item>
+          <md-item-content>
+            test
+          </md-item-content>
+        </md-item>
+        <md-item>
+          <md-item-content>
+            test
+          </md-item-content>
+        </md-item>
+        <md-item>
+          <md-item-content>
+            test
+          </md-item-content>
+        </md-item>
+      </md-list>
+    </md-sidenav>
+
+
+</md-content>

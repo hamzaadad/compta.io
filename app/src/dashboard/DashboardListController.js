@@ -21,7 +21,7 @@
     $scope.selectUser      = selectUser;
     $scope.toggleUsersList = toggleUsersList;
     $scope.showActions     = showActions;
-
+    alert('state:', $state.current.name)
     // Load all registered users
 
     DashboardService
@@ -29,6 +29,7 @@
           .then( function( menus ) {
             $scope.menus    = [].concat(menus);
             $scope.selected = menus[0];
+            $state.go($scope.selected.state)
           });
 
     // *********************************

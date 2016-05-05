@@ -32,9 +32,7 @@ md-list .md-button {
 }
 
 #content  {
-  padding-left: 40px;
-  padding-right: 40px;
-  padding-top: 5px;
+  padding:0;
 }
 
 #content .md-button.action {
@@ -110,4 +108,23 @@ md-sidenav.md-locked-open {
 
 .md-button.menu-item{
   color:gray;
+}
+
+h2{
+  margin:0;
+}
+
+md-content.content-wrapper{
+  height: 600px;
+}
+
+md-toolbar svg{
+  fill:white
+}
+.avatar > svg{
+  color:rgb(63,81,181);
+}
+
+h2 > .avatar > svg  {
+  fill:rgb(63, 181, 76);
 }

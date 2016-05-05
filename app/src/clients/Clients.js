@@ -9,8 +9,8 @@
   $stateProvider
     .state('clients', {
       url: "/clients",
-      //templateUrl:"clients/index.html",
-      template:"<h1>asdasdas</h1>",
+      templateUrl:"src/clients/index.html",
+      //template:"<h1>asdasdas</h1>",
       controller:"ClientsController",
       controllerAs: "clients"
     })
