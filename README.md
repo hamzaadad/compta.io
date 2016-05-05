@@ -41,15 +41,4 @@ this server is:
 npm start
 ```
 
-Now browse to the app at `http://localhost:8000/app/index.html`.
-
-
-## Directory Layout
-
-```
-app/                    --> all of the source files for the application
-   assets/app.css        --> default stylesheet
-   src/           --> all app specific modules
-      users/              --> package for user features
-      index.html            --> app layout file (the main html template file of the app)
-```
+Now browse to the app at `http://localhost:8000/app/`.
