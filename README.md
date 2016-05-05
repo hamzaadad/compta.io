@@ -1,16 +1,10 @@
-# Start-Angular-Material
-My simple bootstrap project for Angular JS and Material design small projects
-
-This is a mix between:
-* [https://github.com/angular/angular-seed](https://github.com/angular/angular-seed)
-* [https://github.com/angular/material-start](https://github.com/angular/material-start)
-
-Added some of my helpers, mixed both projects and removed test dependancies as this bootstrapp will mainly be used for small tiny prototypes.
+# Compta.io Project
+a simple project based on angular / material-design...
 
 
 ### Install Dependencies
 
-We have two kinds of dependencies in this project: tools and angular framework code.  The tools help
+we have two kinds of dependencies in this project: tools and angular framework code.  The tools help
 us manage and test the application.
 
 * We get the tools we depend upon via `npm`, the [node package manager][npm].
@@ -38,7 +32,7 @@ We have preconfigured the project with a simple development web server.  The sim
 this server is:
 
 ```
-npm start
+live-server --ports=8080
 ```
 
 Now browse to the app at `http://localhost:8000/app/`.
