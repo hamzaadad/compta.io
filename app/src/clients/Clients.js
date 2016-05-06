@@ -1,5 +1,4 @@
-(function(){
-  'use strict';
+;(function(){
 
   // Prepare the 'users' module for subsequent registration of controllers and delegates
   angular.module('clients', [ 'ngMaterial' , 'ui.router'])
@@ -10,15 +9,14 @@
     .state('clients', {
       url: "/clients",
       templateUrl:"src/clients/index.html",
-      //template:"<h1>asdasdas</h1>",
       controller:"ClientsController",
       controllerAs: "clients"
     })
-    .state('client',{
-      url:'/clients/{id}',
-      templateUrl:"clients/single.html",
+    .state('clients.client',{
+      url:'/add',
+      templateUrl:"src/clients/form.html",
       controller:"ClientsController",
-      controllerAs: "clients"
+      controllerAs: "clients",
     })
   });
 

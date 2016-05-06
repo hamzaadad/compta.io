@@ -14,25 +14,21 @@
 
   <body ng-app="starterApp" layout="column" ng-controller="DashboardListController" ng-cloak>
 
+    <md-toolbar layout="row">
+      <md-button ng-click="toggleUsersList()" hide-gt-sm class="menuBtn">
+        <md-icon md-svg-icon="menu" ></md-icon>
+      </md-button>
+      <h1>Compta.io</h1>
+    </md-toolbar>
 
     <div layout="row" flex>
 
-      <md-sidenav style="height: 650px;"class="md-sidenav-left md-whiteframe-z2" md-component-id="left" md-is-locked-open="$media('gt-sm')">
-        <md-list style="padding-top:0px">
-          <md-item>
-            <md-item-content style="height: 113px;background: #E3F2FD;box-shadow: inset 0 -7px 9px -7px rgba(0,0,0,0.4);">
-
-                <!--md-icon md-svg-icon="mainlogo" class="avatar"></md-icon-->
-                <img style="margin: 20px;width: 60px;"src="assets/svg/logo-1.png" alt="" />
-                Compta Dream
-
-            </md-item-content>
-          </md-item>
+      <md-sidenav class="md-sidenav-left md-whiteframe-z2" md-component-id="left" md-is-locked-open="$media('gt-sm')">
+        <md-list>
           <md-item ng-repeat="cat in menus">
             <md-item-content>
               <md-button ng-click="selectUser(cat)" class="menu-item" ng-class="{'selected' : cat === selected }">
                 <md-icon md-svg-icon="{{cat.avatar}}" class="avatar"></md-icon>
-
                 {{cat.name}}
               </md-button>
             </md-item-content>

@@ -21,7 +21,8 @@
     $scope.selectUser      = selectUser;
     $scope.toggleUsersList = toggleUsersList;
     $scope.showActions     = showActions;
-    alert('state:', $state.current.name)
+    console.log($state.current.name);
+    //alert('state:', $state.current.name)
     // Load all registered users
 
     DashboardService

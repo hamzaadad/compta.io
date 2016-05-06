@@ -16,6 +16,7 @@
         .icon("agenda", "assets/svg/agenda.svg", 24)
         .icon("clients", "assets/svg/clients.svg", 24)
         .icon("facture", "assets/svg/facture.svg", 24)
+      
 
 
         // Use the 'brown' theme - override default 'blue' theme

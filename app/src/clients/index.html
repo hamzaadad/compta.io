@@ -5,25 +5,44 @@
     </md-button>
     <h2 style="padding:10px;color: white;"> <md-icon md-svg-icon="{{selected.avatar}}" ng-class="{avatar:selected}" aria-label="{{selected.name}}" style="width:70px;height:70px;color:rgb(63, 181, 76);"></md-icon> {{selected.name}}</h2>
   </md-toolbar>
-  <md-sidenav class="md-sidenav-left md-whiteframe-z2" md-component-id="left" md-is-locked-open="$media('gt-sm')">
-      <md-list>
-        <md-item>
-          <md-item-content>
-            test
-          </md-item-content>
-        </md-item>
-        <md-item>
-          <md-item-content>
-            test
-          </md-item-content>
-        </md-item>
-        <md-item>
-          <md-item-content>
-            test
-          </md-item-content>
-        </md-item>
-      </md-list>
-    </md-sidenav>
+
+  <md-grid-list
+        md-cols-gt-md="12"
+        md-row-height-gt-md="1:1" md-row-height="2:2"
+        md-gutter="12px" md-gutter-gt-sm="8px" >
+        <md-grid-tile class="gray"  style="height:580px;min-height:580px;max-height:580px;border-right:1px solid lightgray" md-colspan="3">
+          <md-list style="padding-top:0px;height:100%">
+            <md-item>
+              <div class="display:inline-block">
+                <input class="search-input" type="text" name="name" value="" placeholder="Recherche" ng-model="query"
+                style="width: 100%;">
+              </div>
+            </md-item>
+            <md-item ng-repeat="client in clientList | filter:query">
+              <md-item-content style="flex-direction:column;    font-size: 10px;cursor:pointer" class="client-item"  ng-click="select(client)">
+                <h2>
+                  {{client.name | uppercase}}
+                </h2>
+                <div style="color:black;text-align:right">({{client.ref}}) {{client.date | date:"MM/dd/yyyy"}}</div>
+              </md-item-content>
+            </md-item>
+
+          </md-list>
+     <md-grid-tile-footer>
+       <h3>#1: (3r x 2c)</h3>
+     </md-grid-tile-footer>
+   </md-grid-tile>
+   <md-grid-tile md-colspan="9">
+     <div class="" style="width:100%;height: 100%;padding: 10px;">
+       <div class="" style="display:inline-block">
+         <h2 style="display:inline-block">{{selectedClient.name | uppercase}}</h2>
+         <h4 style="display:inline-block;margin-left:20px">Reference : {{selectedClient.ref}} Dossier de : {{selectedClient.date | date:"MM/dd/yyyy"}}</h4>
+         step 1 - create planecomtable
+       </div>
+
+     </div>
+   </md-grid-tile>
+</md-grid-list>
 
 
 </md-content>
